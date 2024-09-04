@@ -1,0 +1,83 @@
+'--- Color Setting ---
+' System is #DAE2F3
+' Layer is #FEE599
+' Component is #lightcyan
+' Module is #E2EFD9
+' Unit is #gainsboro
+' Tiny is #pink
+'---------------------
+
+@startuml
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam node {
+    BackgroundColor LightSkyBlue
+    BorderColor Black
+}
+
+'----- Define Name for System  --------------
+[SYSAD_xxx\nSoftware] as SYS_Sw #DAE2F3
+'----- Define Name for Layer ----------------
+[SWC Layer] as LAYER_Swc #FEE599
+[BSW Layer] as LAYER_Bsw #FEE599
+[MCAL Layer] as LAYER_Mcal #FEE599
+'----- Define Name for Components -----------
+[SWAD-001\nApplication] as COMP_App #lightcyan
+[SWAD-002\nService] as COMP_Service #lightcyan
+[SWAD-003\nHAL] as COMP_Hal #lightcyan
+[SWAD-004\nOS] as COMP_Os #lightcyan
+[SWAD-005 Drivers] as COMP_Drv #lightcyan
+'----- Define Name for Modules --------------
+[SWAD-001-001\nMain] as MOD_Main #E2EFD9
+[SWAD-001-002\nAPPs Initialization] as MOD_APP_Init #E2EFD9
+[SWAD-001-003\nPinIOs Sensing] as MOD_APP_PinIOsSening #E2EFD9
+[SWAD-001-004\nState Machine] as MOD_APP_Sm #E2EFD9
+[SWAD-001-005\nfreeRTOS Application] as MOD_APP_RtosApp #E2EFD9
+[SWAD-001-006\nTask and Schedule] as MOD_APP_TaskSch #E2EFD9
+[SWAD-001-007\nClock Source Config] as MOD_APP_ClkConfig #E2EFD9
+[SWAD-002-001\nUDS] as MOD_SERVICE_Uds #E2EFD9
+[SWAD-002-002\nFuSa] as MOD_SERVICE_FuSa #E2EFD9
+[SWAD-002-003\nSecurity] as MOD_SERVICE_Security #E2EFD9
+[SWAD-003-001\nClock Source Config] as MOD_HAL_ClkConfig #E2EFD9
+[SWAD-003-002\nPinIOs Sensing] as MOD_HAL_PinIOsSensing #E2EFD9
+[SWAD-004-001\nfreeRTOS] as MOD_OS_Rtos #E2EFD9
+[SWAD-005-001\nClock Source Config] as MOD_DRIVERS_ClkConfig #E2EFD9
+[SWAD-005-002\nPinIOs Sensing] as MOD_DRIVERS_PinIOsSensing #E2EFD9
+
+'----- System Joins to Layers --------------
+SYS_Sw --> LAYER_Swc
+SYS_Sw --> LAYER_Bsw
+SYS_Sw --> LAYER_Mcal
+'----- Layer Joins to Components --------------
+LAYER_Swc --> COMP_App
+LAYER_Bsw --> COMP_Service
+LAYER_Bsw  --> COMP_Hal
+LAYER_Bsw --> COMP_Os
+LAYER_Mcal --> COMP_Drv 
+'----- Component Joins to Modules -------------
+' App Module
+COMP_App --> MOD_Main
+COMP_App --> MOD_APP_Init
+COMP_App --> MOD_APP_PinIOsSening
+COMP_App --> MOD_APP_Sm
+COMP_App --> MOD_APP_RtosApp
+COMP_App --> MOD_APP_TaskSch
+COMP_App --> MOD_APP_ClkConfig
+
+' Service Module
+COMP_Service --> MOD_SERVICE_Uds
+COMP_Service --> MOD_SERVICE_FuSa
+COMP_Service --> MOD_SERVICE_Security
+
+' HAL Module
+COMP_Hal --> MOD_HAL_ClkConfig
+COMP_Hal --> MOD_HAL_PinIOsSensing
+
+' OS Module
+COMP_Os --> MOD_OS_Rtos
+
+' Drivers Module
+COMP_Drv --> MOD_DRIVERS_ClkConfig
+COMP_Drv --> MOD_DRIVERS_PinIOsSensing
+'---------------------------------
+@enduml
