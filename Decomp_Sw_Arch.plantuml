@@ -1,13 +1,23 @@
-'--- Color Setting ---
-' System is #DAE2F3
-' Layer is #FEE599
-' Component is #lightcyan
-' Module is #E2EFD9
-' Unit is #gainsboro
-' Tiny is #pink
-'---------------------
-
 @startuml
+'----- Table Description ----
+'Object Colors Setting
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+legend top
+|=        Object  |=           Colors  |
+| Hardware  |<back:sienna>                                    |
+| System  |<back:mediumpurple>                                    |
+| Layer  |<back:#FEE599>                                    |
+| Component |<back:#lightcyan>                                    |
+| Module |<back:#E2EFD9>                                    |
+| Uint |<back:#aquamarine>                                    |
+| Tiny |<back:#pink>                                    |
+'Arrow Function
+|=        Arrow |=        Description |
+| Solid Line (->) | Don't response value  |
+| Dotted Line (--->) | Response value |
+endlegend
+
 skinparam defaultFontName Arial
 skinparam defaultFontSize 12
 skinparam node {
@@ -16,7 +26,7 @@ skinparam node {
 }
 
 '----- Define Name for System  --------------
-[SYSAD_xxx\nSoftware] as SYS_Sw #DAE2F3
+[SYSAD_xxx\nSoftware] as SYS_Sw #mediumpurple
 '----- Define Name for Layer ----------------
 [SWC Layer] as LAYER_Swc #FEE599
 [BSW Layer] as LAYER_Bsw #FEE599
