@@ -12,10 +12,6 @@ legend top
 | Module |<back:#E2EFD9>                                    |
 | Uint |<back:#aquamarine>                                    |
 | Tiny |<back:#pink>                                    |
-'Arrow Function
-|=        Arrow |=        Description |
-| Solid Line (->) | Don't response value  |
-| Dotted Line (--->) | Response value |
 endlegend
 
 skinparam defaultFontName Arial
