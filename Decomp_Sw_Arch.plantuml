@@ -10,7 +10,7 @@ skinparam node {
 
 legend top
 |=        Object  |=           Colors  |
-| Hardware  |<back:#A0522D>                                    |
+| Microcontroller  |<back:#A0522D>                                    |
 | System  |<back:#9370DB>                                    |
 | Layer  |<back:#FEE599>                                    |
 | Component |<back:#E0FFFF>                                    |
