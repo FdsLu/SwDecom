@@ -3,36 +3,34 @@
 'Object Colors Setting
 skinparam defaultFontName Arial
 skinparam defaultFontSize 12
-legend top
-|=        Object  |=           Colors  |
-| Hardware  |<back:sienna>                                    |
-| System  |<back:mediumpurple>                                    |
-| Layer  |<back:#FEE599>                                    |
-| Component |<back:#lightcyan>                                    |
-| Module |<back:#E2EFD9>                                    |
-| Uint |<back:#aquamarine>                                    |
-| Tiny |<back:#pink>                                    |
-endlegend
-
-skinparam defaultFontName Arial
-skinparam defaultFontSize 12
 skinparam node {
-    BackgroundColor LightSkyBlue
-    BorderColor Black
+    BackgroundColor #87CEFA
+    BorderColor #000000
 }
 
+legend top
+|=        Object  |=           Colors  |
+| Hardware  |<back:#A0522D>                                    |
+| System  |<back:#9370DB>                                    |
+| Layer  |<back:#FEE599>                                    |
+| Component |<back:#E0FFFF>                                    |
+| Module |<back:#E2EFD9>                                    |
+| Uint |<back:#7FFFD4>                                    |
+| Tiny |<back:#FFC0CB>                                    |
+endlegend
+
 '----- Define Name for System  --------------
-[SYSAD_xxx\nSoftware] as SYS_Sw #mediumpurple
+[SYSAD_xxx\nSoftware] as SYS_Sw #9370DB
 '----- Define Name for Layer ----------------
 [SWC Layer] as LAYER_Swc #FEE599
 [BSW Layer] as LAYER_Bsw #FEE599
 [MCAL Layer] as LAYER_Mcal #FEE599
 '----- Define Name for Components -----------
-[SWAD-001\nApplication] as COMP_App #lightcyan
-[SWAD-002\nService] as COMP_Service #lightcyan
-[SWAD-003\nHAL] as COMP_Hal #lightcyan
-[SWAD-004\nOS] as COMP_Os #lightcyan
-[SWAD-005 Drivers] as COMP_Drv #lightcyan
+[SWAD-001\nApplication] as COMP_App #E0FFFF
+[SWAD-002\nService] as COMP_Service #E0FFFF
+[SWAD-003\nHAL] as COMP_Hal #E0FFFF
+[SWAD-004\nOS] as COMP_Os #E0FFFF
+[SWAD-005 Drivers] as COMP_Drv #E0FFFF
 '----- Define Name for Modules --------------
 [SWAD-001-001\nMain] as MOD_Main #E2EFD9
 [SWAD-001-002\nAPPs Initialization] as MOD_APP_Init #E2EFD9
