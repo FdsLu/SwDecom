@@ -44,7 +44,7 @@ endlegend
 [SWAD-002-003\nSecurity] as MOD_SERVICE_Security #E2EFD9
 [SWAD-003-001\nClock Source Config] as MOD_HAL_ClkConfig #E2EFD9
 [SWAD-003-002\nPinIOs Sensing] as MOD_HAL_PinIOsSensing #E2EFD9
-[SWAD-004-001\nfreeRTOS] as MOD_OS_Rtos #E2EFD9
+[freeRTOS Modules] as MOD_Rtos_Modules #E2EFD9
 [SWAD-005-001\nClock Source Config] as MOD_DRIVERS_ClkConfig #E2EFD9
 [SWAD-005-002\nPinIOs Sensing] as MOD_DRIVERS_PinIOsSensing #E2EFD9
 
@@ -78,7 +78,7 @@ COMP_Hal --> MOD_HAL_ClkConfig
 COMP_Hal --> MOD_HAL_PinIOsSensing
 
 ' OS Module
-COMP_Os --> MOD_OS_Rtos
+COMP_Os --> MOD_Rtos_Modules
 
 ' Drivers Module
 COMP_Drv --> MOD_DRIVERS_ClkConfig
